@@ -10,22 +10,24 @@ body{
     display: flex;
     flex-direction: row;
     width: 900px;
+    margin: 0 auto;
     color: var(--font-color);
 }
 
 .key{
-    width: 150px;
-    height: 50px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin: 300px 10px;
-    font-size: 13px;
+    width: 150px;
+    height: 50px;
     border: var(--font-color) 1px solid;
+    margin: 300px 10px;
+    text-align: center;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 
 kbd{
-    font-size: 15px;
     margin: 5px 0;
+    font-size: 15px;
+    
 }
