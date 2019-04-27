@@ -1,15 +1,30 @@
 :root{
     --font-color: #ddd4d4;
+    --sound-color: #ffd000bb;
+}
+
+html, body{
+    height: 100%;
+    font-size: 10px;
 }
 
 body{
     background: #000000c7;
 }
 
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 .keys{
     display: flex;
     flex-direction: row;
-    width: 900px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
     margin: 0 auto;
     color: var(--font-color);
 }
@@ -17,13 +32,19 @@ body{
 .key{
     display: flex;
     flex-direction: column;
-    width: 150px;
     height: 50px;
+    width: 80px;
     border: var(--font-color) 1px solid;
-    margin: 300px 10px;
+    border-radius: 2px;
+    margin: 10px;
     text-align: center;
     font-size: 13px;
     letter-spacing: 1px;
+    transition: all 0.07s;
+}
+
+.key:hover{
+    cursor: pointer;
 }
 
 kbd{
@@ -33,5 +54,11 @@ kbd{
 }
 
 .sound{
-    color: rgba(255, 208, 0, 0.733);
+    color: var(--sound-color);
+}
+
+.playing{
+    transform: scale(1.1);
+    border-color: var(--sound-color);
+    box-shadow: 0 0 10px var(--sound-color);
 }
